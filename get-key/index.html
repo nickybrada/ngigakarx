@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krx License</title>
+    <link rel="stylesheet" href="https://krxclient.xyz/assets/css/style.css">
+    <link rel="stylesheet" href="https://krxclient.xyz/assets/css/custom.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #key {
+            margin: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="key">Key: </div>
+    <button onclick="window.location.href='https://krx.lol/client.exe'">Download Client</button>
+
+    <script>
+        function generateKey() {
+            const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            let key = '';
+            for (let i = 0; i < 24; i++) {
+                key += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            document.getElementById('key').innerText = `Key: ${key}`;
+        }
+        window.onload = generateKey;
+    </script>
+
+</body>
+</html>
