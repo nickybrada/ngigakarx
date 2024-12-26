@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krx License</title>
-    <link rel="stylesheet" href="https://krxclient.xyz/assets/css/style.css">
-    <link rel="stylesheet" href="https://krxclient.xyz/assets/css/custom.css">
     <style>
         body {
             display: flex;
@@ -20,17 +18,27 @@
             font-size: 24px;
             font-weight: bold;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
+        .button {
+            background-color: #1a1a1a; 
+            color: white;
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 5px;
             cursor: pointer;
+            text-decoration: none; 
+            transition: background-color 0.3s; 
+        }
+        .button:hover {
+            background-color: #0056b3; 
         }
     </style>
 </head>
 <body>
 
     <div id="key">Key: </div>
-    <a class="mt-auto bg-blue-500 text-center text-white py-3 px-4 rounded hover:bg-blue-600" href="https://krx.lol/client.exe">Download Client</a>
+    <a class="button" href="https://krx.lol/client.exe">Download Client</a>
+
     <script>
         function generateKey() {
             const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
